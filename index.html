@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sketch</title>
+    <title>AS Computer Programming Final</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -15,16 +15,26 @@
   <body>
     <script src="sketch.js"></script>
     <div>
-      <input type="range" id="x" min="0" max="365" value="0" step="1">
-      <label for="x"> Rotate Around X</label>
+      <input type="range" id="xR" min="0" max="365" value="0" step="1">
+      <label for="xR"> Rotate Around X</label>
+
+      <input type="range" id="yR" min="0" max="364" value="0" step="1">
+      <label for="yR"> Rotate Around Y</label>
+        
+      <input type="range" id="zR" min="0" max="364" value="0" step="1">
+      <label for="zR"> Rotate Around Z</label>
     </div>
     <div>
-      <input type="range" id="y" min="0" max="365" value="0" step="1">
-      <label for="y"> Rotate Around Y</label>
+      <input type="range" id="xD" min="0" max="5" value="1" step="0.01">
+      <label for="xD"> Dialate X</label>
+
+      <input type="range" id="yD" min="0" max="5" value="1" step="0.01">
+      <label for="yD"> Dialate Y</label>
+        
+      <input type="range" id="zD" min="0" max="5" value="1" step="0.01">
+      <label for="zD"> Dialate Z</label>
     </div>
-    <div>
-      <input type="range" id="z" min="0" max="365" value="0" step="1">
-      <label for="z"> Rotate Around Z</label>
-    </div>
+    
+    
   </body>
 </html>
