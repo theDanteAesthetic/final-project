@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(600, 600, WEBGL);
   
 }
 
@@ -20,13 +20,14 @@ function draw() {
   //resetVectors();
   horizon();
   cameraP();
-  drawPoints();
+  //drawPoints();
   rTransformX();
   rTransformY();
   rTransformZ();
   dTransformX();
   dTransformY();
   dTransformZ();
+  makeBox();
 }
 
 function horizon() {
@@ -131,7 +132,7 @@ function dTransformZ(){
 }
 function drawPoints(){
   push();
-    translate(width/2, height/2);
+    translate(0,0);
     stroke('lime');
     strokeWeight(2);
     for(let i = 0; i < vectors.length; i++){
@@ -140,12 +141,26 @@ function drawPoints(){
         if(vectors[i]!=vectors[u]){
           if((vectors[i].r.x === vectors[u].r.x || vectors[i].r.y === vectors[u].r.y) && vectors[i].r.z === vectors[u].r.z){
             line(vectors[i].x*50,vectors[i].y*50,vectors[u].x*50,vectors[u].y*50);
+            //line(vectors[i].z*50,vectors[i].y*50,vectors[u].z*50,vectors[u].y*50);
           }
           if(vectors[i].r.x === vectors[u].r.x && vectors[i].r.y === vectors[u].r.y && vectors[i].r.z != vectors[u].r.z){
             line(vectors[i].x*50,vectors[i].y*50,vectors[u].x*50,vectors[u].y*50);
+            //line(vectors[i].z*50,vectors[i].y*50,vectors[u].z*50,vectors[u].y*50)
           }
         }
       }
     }
+  pop();
+}
+
+function makeBox(){
+  push();
+    let aa = frameCount * 0.1;
+    applyMatrix(cos(aa), 0, sin(aa), 0, 0, 1, 0, 0, -1*sin(aa), 0, cos(aa), 0, 0, 0, 0, 1);
+    stroke('lime');
+    strokeWeight(1);
+    noFill();
+    rotateX(-aa/2);
+    box(100, 100, 100);
   pop();
 }
