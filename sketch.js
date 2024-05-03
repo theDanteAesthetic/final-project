@@ -24,18 +24,20 @@ function draw() {
 
 function makeAxis(){
   push();
-    rotateX(30);
-    rotateY(30)
+    rotateX(45);
+    rotateZ(45);
     noFill();
     stroke(255)
-    box(width, 0, 0)
-    box(0, height, 0)
-    box(0, 0, width+height)
+    box(2*width, 0, 0)
+    box(0, 2*width, 0)
+    box(0, 0, 2*width)
   pop();
 }
 function makeBox(){
   push();
     angleMode(DEGREES);
+    rotateX(45);
+    rotateZ(45)
     let aa = frameCount * 0.01;
     let inputMatirx = {
       m11: document.querySelector("#m11").value,
@@ -49,7 +51,7 @@ function makeBox(){
       m33: document.querySelector("#m33").value,
     }
     strokeWeight(1);
-    noFill();
+    fill('rgba(255, 255, 255, 0)');
     stroke('lime');
     applyMatrix(inputMatirx.m11, inputMatirx.m12, inputMatirx.m13, 0, inputMatirx.m21, inputMatirx.m22, inputMatirx.m23, 0, inputMatirx.m31, inputMatirx.m32, inputMatirx.m33, 0, 0, 0, 0, 1);
     box(100, 100, 100);
