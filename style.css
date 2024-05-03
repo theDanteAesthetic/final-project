@@ -1,8 +1,13 @@
 html, body {
   margin: 0;
   padding: 0;
+  
 }
-
+.matrixInput {
+  display: grid;
+  grid-template-columns: 3rem 3rem 3rem;
+  grid-template-rows: 3rem 3rem 3rem;
+}
 canvas {
   display: block;
 }
