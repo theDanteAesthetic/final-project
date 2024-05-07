@@ -1,6 +1,7 @@
 function setup() {
   createCanvas(600, 600, WEBGL);
-  
+  let defaultCam = createCamera();
+  defaultCam.camera(0, 0, 200, 0, 0, 0, 0, 1, 0)
 }
 
 let vectors = [
@@ -18,26 +19,23 @@ let vectors = [
 function draw() {
   background(0);
   //resetVectors();
+  orbitControl();
   makeAxis();
   makeBox();
 }
 
 function makeAxis(){
   push();
-    rotateX(45);
-    rotateZ(45);
     noFill();
     stroke(255)
-    box(2*width, 0, 0)
-    box(0, 2*width, 0)
-    box(0, 0, 2*width)
+    box(width, 0, 0)
+    box(0, width, 0)
+    box(0, 0, width)
   pop();
 }
 function makeBox(){
   push();
     angleMode(DEGREES);
-    rotateX(45);
-    rotateZ(45)
     let aa = frameCount * 0.01;
     let inputMatirx = {
       m11: document.querySelector("#m11").value,
@@ -54,6 +52,6 @@ function makeBox(){
     fill('rgba(255, 255, 255, 0)');
     stroke('lime');
     applyMatrix(inputMatirx.m11, inputMatirx.m12, inputMatirx.m13, 0, inputMatirx.m21, inputMatirx.m22, inputMatirx.m23, 0, inputMatirx.m31, inputMatirx.m32, inputMatirx.m33, 0, 0, 0, 0, 1);
-    box(100, 100, 100);
+    box(30, 30, 30);
   pop();
 }
