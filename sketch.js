@@ -23,6 +23,7 @@ let vectors = [
 function draw() {
   background(0);
   //resetVectors();
+  reset();
   orbitControl();
   makeAxis();
   makeBox();
@@ -32,11 +33,11 @@ function makeAxis(){
   push();
     noFill();
     stroke('#00FF2F')
-    box(width, 0, 0)
+    box(5*width, 0, 0)
     stroke('#0078FF')
-    box(0, width, 0)
+    box(0, 5*width, 0)
     stroke('#FF001F')
-    box(0, 0, width)
+    box(0, 0, 5*width)
   pop();
 }
 
@@ -89,6 +90,7 @@ function makeDecBox(){
     decBox = endGeometry();
   pop();
 }
+
 function makeBox(){
   push();
     //angleMode(DEGREES);
@@ -112,3 +114,13 @@ function makeBox(){
     //box(30, 30, 30);
   pop();
 }
+
+function reset(){
+  push();
+    let resetButton = document.querySelector("#resetButton");
+    resetButton.addEventListener("click", () => {
+      window.location.reload();
+    })
+  pop();
+}
+
