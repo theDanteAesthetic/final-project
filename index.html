@@ -6,6 +6,7 @@
 
     <title>AS Computer Programming Final</title>
 
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <script src="libraries/p5.min.js"></script>
@@ -14,8 +15,7 @@
 
   <body>
     <script src="sketch.js"></script>
-    
-    <form action="">
+    <div class="inputBox">
       <div class="matrixInput">
         <input type="number" class="mInput" id="m11" value="1">
         <input type="number" class="mInput" id="m12" value="0">
@@ -28,7 +28,11 @@
         <input type="number" class="mInput" id="m33" value="1">
       </div>
       <input type="button" value="reset" id="resetButton">
-    </form>
-    
+      <div class="rotateInput">
+        <input type="range" step="0.1" value="0" min="0" max="360" id="rX">
+        <input type="range" step="0.1" value="0" min="0" max="360" id="rY">
+        <input type="range" step="0.1" value="0" min="0" max="360" id="rZ">
+      </div>
+    </div>
   </body>
 </html>

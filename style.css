@@ -1,13 +1,44 @@
 html, body {
+  background-color: black;
   margin: 0;
   padding: 0;
   
 }
+body {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 3rem 3rem 3rem;
+}
+
+.inputBox {
+  min-height: 600px;
+  grid-template-columns: 10rem 10rem 10rem;
+  grid-template-rows: 3rem 3rem 3rem 3rem 3rem;
+  border: 2px dashed white;
+  border-radius: 10px;
+  margin: 5px;
+  background-color: rgb(55, 80, 132);
+  
+}
+
 .matrixInput {
   display: grid;
+  padding: 10px;
   grid-template-columns: 3rem 3rem 3rem;
   grid-template-rows: 3rem 3rem 3rem;
+  grid-row: 1;
+}
+
+.rotateInput {
+  display: grid;
+  padding: 5px;
+  grid-template-columns: 10rem;
+  grid-template-rows: 2rem 2rem 2rem;
+  grid-row: 1;
+  grid-column: 4;
 }
 canvas {
   display: block;
+  border: 2px dashed white;
+  margin: auto;
 }

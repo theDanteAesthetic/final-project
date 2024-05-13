@@ -1,7 +1,7 @@
 let decBox;
 
 function setup() {
-  createCanvas(600, 600, WEBGL);
+  createCanvas(800, 600, WEBGL);
   angleMode(DEGREES);
   let defaultCam = createCamera();
   defaultCam.camera(0, 0, 200, 0, 0, 0, 0, 1, 0);
