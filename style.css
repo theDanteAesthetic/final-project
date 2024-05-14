@@ -11,9 +11,10 @@ body {
 }
 
 .inputBox {
+  display: grid;
   min-height: 600px;
-  grid-template-columns: 10rem 10rem 10rem;
-  grid-template-rows: 3rem 3rem 3rem 3rem 3rem;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 3rem;
   border: 2px dashed white;
   border-radius: 10px;
   margin: 5px;
@@ -26,16 +27,14 @@ body {
   padding: 10px;
   grid-template-columns: 3rem 3rem 3rem;
   grid-template-rows: 3rem 3rem 3rem;
-  grid-row: 1;
 }
 
+.rotateSlider {
+  padding-bottom: 20px;
+}
 .rotateInput {
   display: grid;
-  padding: 5px;
-  grid-template-columns: 10rem;
-  grid-template-rows: 2rem 2rem 2rem;
-  grid-row: 1;
-  grid-column: 4;
+  color: aliceblue;
 }
 canvas {
   display: block;

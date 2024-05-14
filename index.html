@@ -6,7 +6,7 @@
 
     <title>AS Computer Programming Final</title>
 
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <script src="libraries/p5.min.js"></script>
@@ -27,11 +27,16 @@
         <input type="number" class="mInput" id="m32" value="0">
         <input type="number" class="mInput" id="m33" value="1">
       </div>
-      <input type="button" value="reset" id="resetButton">
       <div class="rotateInput">
-        <input type="range" step="0.1" value="0" min="0" max="360" id="rX">
-        <input type="range" step="0.1" value="0" min="0" max="360" id="rY">
-        <input type="range" step="0.1" value="0" min="0" max="360" id="rZ">
+        <input type="range" step="0.1" value="0" min="0" max="360" id="rX" class="rotateSlider">
+        <label for="rX">Rotate Around X Axis</label>
+        <input type="range" step="0.1" value="0" min="0" max="360" id="rY" class="rotateSlider">
+        <label for="rY">Rotate Around Y Axis</label>
+        <input type="range" step="0.1" value="0" min="0" max="360" id="rZ" class="rotateSlider">
+        <label for="rZ">Rotate Around Z Axis</label>
+      </div>
+      <div class="submitButton">
+        <input type="button" value="reset" id="resetButton">
       </div>
     </div>
   </body>
