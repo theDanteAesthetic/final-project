@@ -7,21 +7,22 @@ html, body {
 body {
   display: grid;
   grid-template-columns: 30% 70%;
-  grid-template-rows: 3rem 3rem 3rem;
+  grid-template-rows: 15rem;
 }
 
 .inputBox {
   display: grid;
-  min-height: 600px;
+  min-height: 250px;
   grid-template-columns: auto auto auto;
   grid-template-rows: 3rem;
   border: 2px dashed white;
   border-radius: 10px;
   margin: 5px;
-  background-color: rgb(55, 80, 132);
-  
 }
 
+input[type=range] {
+  cursor: grab;
+}
 .matrixInput {
   display: grid;
   padding: 10px;
@@ -29,6 +30,12 @@ body {
   grid-template-rows: 3rem 3rem 3rem;
 }
 
+.mInput {
+  background: none;
+  color: aliceblue;
+  border-color: aliceblue;
+  border: 1px solid;
+}
 .rotateSlider {
   padding-bottom: 20px;
 }
@@ -40,4 +47,5 @@ canvas {
   display: block;
   border: 2px dashed white;
   margin: auto;
+  border-radius: 10px;
 }

@@ -1,7 +1,7 @@
 let decBox;
 
 function setup() {
-  createCanvas(800, 600, WEBGL);
+  createCanvas(900, 600, WEBGL);
   angleMode(DEGREES);
   let defaultCam = createCamera();
   defaultCam.camera(0, 0, 200, 0, 0, 0, 0, 1, 0);
@@ -22,13 +22,24 @@ let vectors = [
 
 function draw() {
   background(0);
-  //resetVectors();
   reset();
   orbitControl();
   makeAxis();
   makeBox();
 }
 
+function getRotationX(){
+  let aa = document.querySelector("#rX").value;
+  
+}
+function getRotationY(){
+  let aa = document.querySelector("#rY").value;
+  
+}
+function getRotationZ(){
+  let aa = document.querySelector("#rZ").value;
+  
+}
 function makeAxis(){
   push();
     noFill();
@@ -93,8 +104,10 @@ function makeDecBox(){
 
 function makeBox(){
   push();
-    //angleMode(DEGREES);
-    let aa = frameCount * 0.01;
+    angleMode(DEGREES);
+    let xx = document.querySelector("#rX").value;
+    let yy = document.querySelector("#rY").value;
+    let zz = document.querySelector("#rZ").value;
     let inputMatirx = {
       m11: document.querySelector("#m11").value,
       m12: document.querySelector("#m12").value,
@@ -110,6 +123,10 @@ function makeBox(){
     fill('rgba(255, 255, 255, 0)');
     stroke(255);
     applyMatrix(inputMatirx.m11, inputMatirx.m12, inputMatirx.m13, 0, inputMatirx.m21, inputMatirx.m22, inputMatirx.m23, 0, inputMatirx.m31, inputMatirx.m32, inputMatirx.m33, 0, 0, 0, 0, 1);
+    rotateX(xx);
+    rotateY(yy);
+    rotateZ(zz);
+    
     model(decBox);
     //box(30, 30, 30);
   pop();
