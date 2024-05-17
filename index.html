@@ -15,28 +15,31 @@
 
   <body>
     <script src="sketch.js"></script>
-    <div class="inputBox">
-      <div class="matrixInput">
-        <input type="number" class="mInput" id="m11" value="1">
-        <input type="number" class="mInput" id="m12" value="0">
-        <input type="number" class="mInput" id="m13" value="0">
-        <input type="number" class="mInput" id="m21" value="0">
-        <input type="number" class="mInput" id="m22" value="1">
-        <input type="number" class="mInput" id="m23" value="0">
-        <input type="number" class="mInput" id="m31" value="0">
-        <input type="number" class="mInput" id="m32" value="0">
-        <input type="number" class="mInput" id="m33" value="1">
-      </div>
-      <div class="rotateInput">
-        <input type="range" step="0.1" value="0" min="0" max="360" id="rX" class="rotateSlider">
-        <label for="rX">Rotate Around X Axis</label>
-        <input type="range" step="0.1" value="0" min="0" max="360" id="rY" class="rotateSlider">
-        <label for="rY">Rotate Around Y Axis</label>
-        <input type="range" step="0.1" value="0" min="0" max="360" id="rZ" class="rotateSlider">
-        <label for="rZ">Rotate Around Z Axis</label>
-      </div>
-      <div class="submitButton">
-        <input type="button" value="reset" id="resetButton">
+    <div class="noCanvas">
+      <h1 class="pageTitle">Dante's Really Cool Linear Transformation Visualizer</h1>
+      <div class="inputBox">
+        <div class="matrixInput">
+          <input type="number" class="mInput" id="m11" value="1">
+          <input type="number" class="mInput" id="m12" value="0">
+          <input type="number" class="mInput" id="m13" value="0">
+          <input type="number" class="mInput" id="m21" value="0">
+          <input type="number" class="mInput" id="m22" value="1">
+          <input type="number" class="mInput" id="m23" value="0">
+          <input type="number" class="mInput" id="m31" value="0">
+          <input type="number" class="mInput" id="m32" value="0">
+          <input type="number" class="mInput" id="m33" value="1">
+        </div>
+        <div class="rotateInput">
+          <input type="range" step="0.1" value="0" min="0" max="360" id="rX" class="rotateSlider">
+          <label for="rX">Rotate Cube Around X Axis</label>
+          <input type="range" step="0.1" value="0" min="0" max="360" id="rY" class="rotateSlider">
+          <label for="rY">Rotate Cube Around Y Axis</label>
+          <input type="range" step="0.1" value="0" min="0" max="360" id="rZ" class="rotateSlider">
+          <label for="rZ">Rotate Cube Around Z Axis</label>
+        </div>
+        <div class="submitButton">
+          <input type="button" value="reset" id="resetButton">
+        </div>
       </div>
     </div>
   </body>
