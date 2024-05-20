@@ -114,12 +114,7 @@ function makeBox(){
     stroke(255);
     applyMatrix(inputMatirx.m11, inputMatirx.m12, inputMatirx.m13, 0, inputMatirx.m21, inputMatirx.m22, inputMatirx.m23, 0, inputMatirx.m31, inputMatirx.m32, inputMatirx.m33, 0, 0, 0, 0, 1);
     updateRV();
-    //rotateX(xx);
-    //rotateY(yy);
-    //rotateZ(zz);
-    
     model(decBox);
-    //box(30, 30, 30);
   pop();
 }
 
@@ -133,18 +128,21 @@ function updateRV(){
       document.querySelector("#m23").value = (-1*sin(xx));
       document.querySelector("#m32").value = (sin(xx));
       document.querySelector("#m33").value = (cos(xx));
+      document.querySelector("#m11").value = 1;
     })
     document.querySelector("#rY").addEventListener("input", () => {
       document.querySelector("#m11").value = (cos(yy));
       document.querySelector("#m13").value = (sin(yy));
       document.querySelector("#m31").value = (-1*sin(yy));
       document.querySelector("#m33").value = (cos(yy));
+      document.querySelector("#m22").value = 1;
     })
     document.querySelector("#rZ").addEventListener("input", () => {
       document.querySelector("#m11").value = (cos(zz));
       document.querySelector("#m12").value = (-1*sin(zz));
       document.querySelector("#m21").value = (sin(zz));
       document.querySelector("#m22").value = (cos(zz));
+      document.querySelector("#m33").value = 1;
     })
       
   pop();

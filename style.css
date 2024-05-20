@@ -41,6 +41,12 @@ input[type=range] {
   grid-template-rows: 3rem 3rem 3rem;
 }
 
+.bottomText {
+  color:rgb(178, 178, 178);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
 .mInput {
   background: none;
   color: aliceblue;
